@@ -23,4 +23,26 @@
 
 ![React JS-CSS](https://img.shields.io/badge/CSS-React%20JS-8A2BE2)
 
+# Photo / Video Documentation
+
+<table style="width: 99%;">
+  <tr>
+    <td style="width: 60%;">
+  <video src = "https://github.com/yarasfand/react-image-carousel/assets/133318363/f960e124-1311-42e8-b9a0-de6c83ad10ba"  controls style="display: inline-block; width: 30vw;" ></video>
+ </td>
+
+<td style="width: 38%;">
+          <img src= "https://github.com/yarasfand/react-image-carousel/assets/133318363/8ee9f76d-c419-4824-9eaf-cad116cdf359"></img>
+   </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
     
