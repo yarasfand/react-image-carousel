@@ -5,7 +5,11 @@
   --button-hover-color: #a4a4a4; /* Button hover color */
 }
 
-.flex-row {
+body{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.carouselNav {
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -13,8 +17,7 @@
   border-bottom: 2px solid rgb(169, 167, 167);
 }
 
-
-.buttonDiv{
+.carouselFirstImgButtonDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -22,36 +25,37 @@
   flex-wrap: wrap;
 }
 
-.flex-row:hover {
+.carouselNav:hover {
   cursor: pointer;
 }
 
-.clicked {
+.carouselOptClicked {
   margin: 0px 1px 0px 0px;
   border: 5px solid var(--secondary-color);
   background-color: var(--primary-color);
   width: 23%;
 }
-.bd1{
+
+/* .bd1{
   border-left: 2px solid rgb(169, 167, 167) ;
-}
-.clicked2 {
+} */
+
+.carouselOptNotClicked {
   margin: 0px 1px 1px 0px;
   width: 23%;
   border-right: 2px solid rgb(169, 167, 167);
 }
 
-.background-image {
+.carouselImage {
   height: 80vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: grid;
   place-items: center;
-  
 }
 
-.imgNo {
+.carouselOptNumberNotClicked {
   color: white;
   left: 0.4em;
   top: 34px;
@@ -67,7 +71,7 @@
   line-height: 42px;
 }
 
-.imgNo2 {
+.carouselOptNumberClicked {
   color: var(--primary-color);
   left: 0.4em;
   top: 34px;
@@ -83,7 +87,7 @@
   line-height: 42px;
 }
 
-.imageTitle {
+.carouselOptTitleNotClicked {
   padding-top: 1.5em;
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +97,7 @@
   font-size: 18px;
 }
 
-.imgTitle2 {
+.carouselOptTitleClicked {
   color: var(--secondary-color);
   padding-top: 1.5em;
   display: flex;
@@ -105,52 +109,53 @@
   font-size: 18px;
 }
 
-.titleCaption {
+.carouselOptCaptionNotClicked {
   padding-left: 4.5em;
   font-weight: 200;
   clear: left;
 }
 
-.titleCaption2 {
+.carouselOptCaptionClicked {
   color: #fff;
   padding-left: 4.5em;
   font-weight: 200;
   clear: left;
 }
 
-.clicked2:hover {
+.carouselOptNotClicked:hover {
   background-color: var(--primary-color);
   transform: translateY(-5px);
   transition: transform 0.3s ease-in-out;
   border: 5px solid var(--secondary-color);
 
-  .titleCaption,
-  .imageTitle {
+  .carouselOptCaptionNotClicked,
+  .carouselOptTitleNotClicked {
     color: white;
   }
 
-  .imgNo {
+  .carouselOptNumberNotClicked {
     color: var(--primary-color);
     background-color: #fff;
   }
 }
 
-.firstImageDes {
+.carouselFirstImgDesc {
   text-align: center;
   color: white; /* Adjust the text color */
 }
 
-.firstImagetxt {
+.carouselFirstImgTitle {
   margin: 0;
   font-size: 3em;
   font-weight: 330;
 }
 
-.firstImagespan {
+.carouselFirstImgTitle > span {
   color: var(--primary-color);
+  font-weight: 400;
 }
 
-.firstImagecapt {
+.carouselFirstImgCapt {
   font-weight: 300;
   font-size: 1.1em;
 }
@@ -165,7 +170,6 @@
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
-  font-family: "Open Sans";
   text-transform: uppercase;
 }
 
@@ -179,7 +183,7 @@
   transform: translateY(50%) rotateX(90deg);
 }
 
-.firstImagebtn1 {
+.carouselFirstImgButton1 {
   border: 0;
   padding: 0;
 }
@@ -212,7 +216,7 @@
   transform: translateY(0) rotateX(0);
 }
 
-.firstImagebtn2 {
+.carouselFirstImgBtn2 {
   border: none;
   margin-left: 2em;
   display: inline-block;
@@ -225,7 +229,7 @@
   transition: 0.3s;
 }
 
-.firstImagebtn2:hover {
+.carouselFirstImgBtn2:hover {
   background: var(--primary-color);
   color: #fff;
 }
@@ -239,18 +243,18 @@
   transition: 0.3s;
 }
 
-.firstImagebtn2:hover .label-down {
+.carouselFirstImgBtn2:hover .label-down {
   top: 0%;
 }
 
 @media screen and (max-width: 850px) {
-  .imgNo,
-  .imgNo2 {
+  .carouselOptNumberNotClicked,
+  .carouselOptNumberClicked {
     display: none;
   }
 
-  .imageTitle,
-  .imgTitle2 {
+  .carouselOptTitleNotClicked,
+  .carouselOptTitleClicked {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -261,8 +265,8 @@
     font-size: 20px;
   }
 
-  .titleCaption,
-  .titleCaption2 {
+  .carouselOptCaptionNotClicked,
+  .carouselOptCaptionClicked {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -275,18 +279,18 @@
 }
 
 @media screen and (max-width: 850px) {
-  .imageTitle,
-  .imgTitle2 {
+  .carouselOptTitleNotClicked,
+  .carouselOptTitleClicked {
     font-size: 16px;
   }
-  .titleCaption,
-  .titleCaption2 {
+  .carouselOptCaptionNotClicked,
+  .carouselOptCaptionClicked {
     font-size: 13px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .background-image {
+  .carouselImage {
     height: 70vh;
     width: 100%;
     background-repeat: no-repeat;
@@ -295,29 +299,29 @@
     place-items: center;
   }
 
-  .imageTitle,
-  .imgTitle2,
-  .titleCaption,
-  .titleCaption2 {
+  .carouselOptTitleNotClicked,
+  .carouselOptTitleClicked,
+  .carouselOptCaptionNotClicked,
+  .carouselOptCaptionClicked {
     display: none;
   }
 
-  .flex-row {
+  .carouselNav {
     justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .clicked,
-  .clicked2 {
+  .carouselOptClicked,
+  .carouselOptNotClicked {
     width: 20%;
     display: grid;
     place-items: center;
     height: 15vh;
   }
 
-  .imgNo {
+  .carouselOptNumberNotClicked {
     color: white;
     position: inherit !important;
     display: inline-block;
@@ -327,7 +331,7 @@
     margin-bottom: 0;
   }
 
-  .imgNo2 {
+  .carouselOptNumberClicked {
     display: inline-block;
     position: inherit !important;
     color: var(--primary-color);
@@ -337,18 +341,18 @@
     margin-bottom: 0;
   }
 
-  .firstImageDes {
+  .carouselFirstImgDesc {
     text-align: center;
     color: white;
   }
 
-  .firstImagetxt {
+  .carouselFirstImgTitle {
     margin: 0;
     font-size: 1.3em;
     font-weight: 330;
   }
 
-  .firstImagecapt {
+  .carouselFirstImgCapt {
     font-weight: 300;
     font-size: 0.8em;
   }
@@ -362,27 +366,26 @@
     line-height: 30px;
   }
 
-  .firstImagebtn2 {
+  .carouselFirstImgBtn2 {
     height: 30px;
     line-height: 30px;
     margin-left: 0;
-    }
-  
+  }
+
   .label-down {
     margin: 0px 20px;
   }
-
 }
 
 @media screen and (max-width: 420px) {
-  .imgNo {
+  .carouselOptNumberNotClicked {
     font-size: 20px;
     width: 40px;
     height: 40px;
     line-height: 32px;
   }
 
-  .imgNo2 {
+  .carouselOptNumberClicked {
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -401,15 +404,29 @@
     line-height: 30px;
   }
 
-  .firstImagebtn2 {
+  .carouselFirstImgBtn2 {
     height: 30px;
     font-size: small;
     padding: 0;
     line-height: 30px;
     margin-left: 0;
-    }
-  
+  }
+
   .label-down {
     margin: 0px 10px;
+  }
+
+  .carouselOptNumberNotClicked {
+    font-size: small;
+    width: 35px;
+    height: 35px;
+    line-height: 28px;
+  }
+
+  .carouselOptNumberClicked {
+    font-size: small;
+    width: 35px;
+    height: 35px;
+    line-height: 28px;
   }
 }

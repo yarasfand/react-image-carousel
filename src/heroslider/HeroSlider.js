@@ -7,32 +7,11 @@ import image3 from "./sliderAssets/images/img3.jpg";
 import image4 from "./sliderAssets/images/img4.jpg";
 
 const images = [
-  {
-    id: 0,
-    title: "Money Care",
-    caption: "Finding Your Next Advisor",
-    value: image1,
-  },
-  {
-    id: 1,
-    title: "Friendly Assistance",
-    caption: "Export Financial Advice",
-    value: image2,
-  },
-  {
-    id: 2,
-    title: "Our Experience",
-    caption: "We Have Years Of Experience",
-    value: image3,
-  },
-  {
-    id: 3,
-    title: "Client Investment",
-    caption: "Doing The Right Thing",
-    value: image4,
-  },
+  { id: 0, title: "Craftsmanship", caption: "Handcrafted Leather", value: image1 },
+  { id: 1, title: "Luxury Accessories", caption: "Fine Leather", value: image2 },
+  { id: 2, title: "Timeless Elegance", caption: " Classic Leather Designs", value: image3 },
+  { id: 3, title: "Personalized Solutions", caption: "Unique Leather Pieces", value: image4 },
 ];
-
 function HeroSlider() {
   const [sliderData, setSliderData] = useState(images[0]);
 
@@ -47,24 +26,24 @@ function HeroSlider() {
       <div>
         {sliderData.value === image1 ? (
           <div
-            className="background-image"
+            className="carouselImage"
             style={{
               backgroundImage: `url(${sliderData.value})`,
             }}
           >
-            <div className="firstImageDes">
-              <p className="firstImagetxt">
+            <div className="carouselFirstImgDesc">
+              <p className="carouselFirstImgTitle">
                 Elegance in Every Stitch
                 <br />
-                Unveil <span className="firstImagespan"> Art of Leather</span>
+                Unveil <span> Art of Leather</span>
               </p>
-              <p className="firstImagecapt">
+              <p className="carouselFirstImgCapt">
                 Immerse Yourself in Luxury Finding your perfect leather
                 companion made easy.
               </p>
 
-              <div className="buttonDiv">
-                <button className="firstImagebtn1">
+              <div className="carouselFirstImgButtonDiv">
+                <button className="carouselFirstImgButton1">
                   <a
                     href="ok"
                     className="btn-flip"
@@ -75,7 +54,7 @@ function HeroSlider() {
                   </a>
                 </button>
 
-                <button className="firstImagebtn2">
+                <button className="carouselFirstImgBtn2">
                   <span className="label-down">CONTACT US</span>
                   <span className="label-down">CONTACT US</span>
                 </button>
@@ -84,21 +63,21 @@ function HeroSlider() {
           </div>
         ) : sliderData.value === image2 ? (
           <div
-            className="background-image"
+            className="carouselImage"
             style={{
               backgroundImage: `url(${sliderData.value})`,
             }}
           ></div>
         ) : sliderData.value === image3 ? (
           <div
-            className="background-image"
+            className="carouselImage"
             style={{
               backgroundImage: `url(${sliderData.value})`,
             }}
           ></div>
         ) : (
           <div
-            className="background-image"
+            className="carouselImage"
             style={{
               backgroundImage: `url(${sliderData.value})`,
             }}
@@ -106,24 +85,26 @@ function HeroSlider() {
         )}
       </div>
 
-      <div className="flex-row">
+
+
+      <div className="flex-row carouselNav">
         {images.map((data, i) => (
           <div
             key={data.id}
             onClick={() => handleClick(i)}
-            className={sliderData.id === i ? "clicked" : "clicked2 bd1"}
+            className={sliderData.id === i ? "carouselOptClicked" : "carouselOptNotClicked"}
           >
-            <p className={sliderData.id === i ? "imgNo2" : "imgNo"}>
+            <p className={sliderData.id === i ? "carouselOptNumberClicked" : "carouselOptNumberNotClicked"}>
               {" "}
               {images[i].id + 1}{" "}
             </p>
 
-            <span className={sliderData.id === i ? "imgTitle2" : "imageTitle"}>
+            <span className={sliderData.id === i ? "carouselOptTitleClicked" : "carouselOptTitleClicked"}>
               {" "}
               {images[i].title}{" "}
             </span>
             <p
-              className={sliderData.id === i ? "titleCaption2" : "titleCaption"}
+              className={sliderData.id === i ? "carouselOptCaptionClicked" : "carouselOptCaptionNotClicked"}
             >
               {images[i].caption}
             </p>
