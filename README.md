@@ -20,3 +20,7 @@
    <strong>Dynamic Image Carousel:</strong> Showcase multiple images with individual titles and captions in an interactive hero slider.
   </li>
     </ul>
+
+![React JS-CSS](https://img.shields.io/badge/CSS-React%20JS-8A2BE2)
+
+    
